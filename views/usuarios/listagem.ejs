@@ -15,6 +15,7 @@
                 <th>Email</th>
                 <th>Nome</th>
                 <th>Perfil</th>
+                <th>Ativo</th>
                 <th>Ações</th>
             </thead>
             <tbody>
@@ -24,6 +25,7 @@
                         <td><%= lista[i].usuarioEmail %></td>
                         <td><%= lista[i].usuarioNome %></td>
                         <td><%= lista[i].perfilId %></td>
+                        <td><%= lista[i].usuarioAtivo %></td>
                         <td>
                             <a href="/usuarios/alterar/<%= lista[i].usuarioId %>" class="btn btn-primary"><i class="fas fa-pen"></i></a>
                             <button onclick="deletar('<%= lista[i].usuarioId %>')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
