@@ -2,7 +2,7 @@ const express = require('express');
 const UsuarioController = require('../controllers/usuarioController');
 
 let ctrl = new UsuarioController();
-
+ 
 let router = express.Router();
 router.get('/',ctrl.listagemView);
 router.get('/cadastrar',ctrl.cadastroView);

@@ -3,6 +3,8 @@ const expressEjsLayout = require('express-ejs-layouts');
 let homeRoute = require("./routes/homeRoute");
 let usuarioRoute = require("./routes/usuarioRoute");
 let loginRoute = require("./routes/loginRoute");
+let perfilRoute = require("./routes/perfilRoute");
+let filmeRoute = require("./routes/filmeRoute");
 const app = express();
 
 //configura o ejs como view engine da nossa aplicação
@@ -22,11 +24,11 @@ app.use(expressEjsLayout);
 app.use("/",  homeRoute);
 app.use("/usuarios", usuarioRoute);
 app.use("/login", loginRoute);
-
-
+app.use("/perfil", perfilRoute);
+app.use("/filmes", filmeRoute);
 
 //inicia o nosso servidor web
-app.listen(5000, function() {
+app.listen(3000, function() {
     console.log("servidor web iniciado")
 })
 

@@ -1,0 +1,38 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    })
+</script>
+
+<h1>Filmes cadastrados</h1>
+<a class="btn btn-secondary" href="filmes/cadastrar">Novo Filme</a>
+
+<hr>
+    <div>
+        <h1>Tabela construida via EJS</h1>
+        <table class="table table-striped">
+            <thead>
+                <th>Id</th>
+                <th>Filme</th>
+                <th>Data de lançamento</th>
+                <th>Genero</th>
+                <th>Nota</th>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < listaFilme.length; i++)  { %>
+                    <tr>
+                        <td><%= listaFilme[i].filmeId %></td>
+                        <td><%= listaFilme[i].filmeNome %></td>
+                        <td><%= listaFilme[i].filmeData %></td>
+                        <td><%= listaFilme[i].filmeGenero %></td>
+                        <td><%= listaFilme[i].filmeNota %></td>
+                        <td>
+                            <a href="/filmes/alterar/<%= listaFilme[i].filmeId %>" class="btn btn-primary"><i class="fas fa-pen"></i></a>
+                            <button onclick="deletar('<%= listaFilme[i].filmeId %>')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+<script src="/js/filmes/deletarFilme.js"></script>

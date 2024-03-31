@@ -118,7 +118,7 @@ class UsuarioModel {
         let valores = [this.#usuarioId];
 
         let result = await banco.ExecutaComandoNonQuery(sql, valores);
-
+ 
         return result;
     }
 }

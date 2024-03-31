@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Cadastro de filmes</h1>
+    <div>
+        <% if (typeof msg != "undefined") { %>             
+            <span  ><%= msg %></span>
+        <% } %>
+    </div>
+    <div>
+        <div>
+            <div>
+                <div class="form-group">
+                    <label for="filmeNome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="filmeNome" name="filmeNome" value="<%= filme.filmeNome %>">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="filmeData" class="form-label">Data de lançamento</label>
+                    <input type="date" class="form-control" id="filmeData" name="filmeData" value="<%= filme.filmeData %>">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="filmeGenero" class="form-label">Genero</label>
+                    <input type="text" class="form-control" id="filmeGenero" name="filmeGenero" value="<%= filme.filmeGenero%>">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="filmeNota" class="form-label">Nota</label>
+                    <input type="number" class="form-control" id="filmeNota" name="filmeNota" value="<% filme.filmeNota %>">
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="btnAlterarFilme" type="button">Alterar</button>
+                <a class="btn btn-secondary" href="/filmes">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/filmes/editarFilme.js"></script>
